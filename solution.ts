@@ -11,3 +11,14 @@ function formatValue(value: string | number | boolean) {
 
   return value;
 }
+
+//2
+function getLength(value: string | any[]) {
+  if (typeof value === "string") {
+    return value.length;
+  }
+  if (Array.isArray(value)) {
+    return value.length;
+  }
+}
+//3
