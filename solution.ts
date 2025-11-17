@@ -44,14 +44,30 @@ function filterByRating(books: { title: string; rating: number }[]) {
 }
 
 // 5
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  isActive: boolean;
-}
-function filterActiveUsers(users: User[]) {
-  return users.filter((user) => user.isActive === true);
+
+function filterActiveUsers(
+  users: {
+    id: number;
+    name: string;
+    email: string;
+    isActive: boolean;
+  }[]
+) {
+  return users.filter((users) => users.isActive === true);
 }
 
 //6
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+function printBookDetails(book: Book) {
+  const availability = book.isAvailable ? "Yes" : "No";
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`
+  );
+}
+
+//7
