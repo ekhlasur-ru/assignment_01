@@ -8,11 +8,9 @@ function formatValue(value: string | number | boolean) {
   if (typeof value === "boolean") {
     return !value;
   }
-
   return value;
 }
 
-//2
 function getLength(value: string | any[]) {
   if (typeof value === "string") {
     return value.length;
@@ -21,29 +19,22 @@ function getLength(value: string | any[]) {
     return value.length;
   }
 }
-//3
 
 class Person {
   name: string;
   age: number;
-
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
   }
-
   getDetails(): string {
     return `'Name: ${this.name}, Age: ${this.age}'`;
   }
 }
 
-//4
-
 function filterByRating(books: { title: string; rating: number }[]) {
   return books.filter((book) => book.rating >= 4);
 }
-
-// 5
 
 function filterActiveUsers(
   users: {
@@ -56,7 +47,6 @@ function filterActiveUsers(
   return users.filter((users) => users.isActive === true);
 }
 
-//6
 interface Book {
   title: string;
   author: string;
