@@ -42,3 +42,16 @@ class Person {
 function filterByRating(books: { title: string; rating: number }[]) {
   return books.filter((book) => book.rating >= 4);
 }
+
+// 5
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+}
+function filterActiveUsers(users: User[]) {
+  return users.filter((user) => user.isActive === true);
+}
+
+//6
