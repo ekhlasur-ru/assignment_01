@@ -38,3 +38,7 @@ class Person {
 }
 
 //4
+
+function filterByRating(books: { title: string; rating: number }[]) {
+  return books.filter((book) => book.rating >= 4);
+}
