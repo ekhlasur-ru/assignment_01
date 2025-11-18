@@ -8,6 +8,7 @@ function formatValue(value: string | number | boolean) {
   if (typeof value === "boolean") {
     return !value;
   }
+  0;
   return value;
 }
 
@@ -60,4 +61,53 @@ function printBookDetails(book: Book) {
   );
 }
 
-//7
+function getUniqueValues(
+  arr1: (number | string)[],
+  arr2: (number | string)[]
+): (number | string)[] {
+  const result: (number | string)[] = [];
+  let index = 0;
+
+  function exists(value: number | string, array: (number | string)[]): boolean {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === value) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!exists(arr1[i], result)) {
+      result[index] = arr1[i];
+      index++;
+    }
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    if (!exists(arr2[i], result)) {
+      result[index] = arr2[i];
+      index++;
+    }
+  }
+  return result;
+}
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+}
+function calculateTotalPrice(products: Product[]): number {
+  if (products.length === 0) return 0;
+  return products
+    .map((product) => {
+      const total = product.price * product.quantity;
+      if (product.discount) {
+        return total * (1 - product.discount / 100);
+      }
+      return total;
+    })
+    .reduce((sum, curr) => sum + curr, 0);
+}
