@@ -80,3 +80,13 @@ const staff: Staff = {
   employeeId: 18237128887,
 };
 ```
+
+## 🔗 Repository Link
+
+You can access the GitHub repository here:  
+👉 [https://github.com/ekhlasur-ru/assignment_01](https://github.com/ekhlasur-ru/assignment_01)
+
+---
+
+Submitted by: _Md. Ekhlasur Rahaman_  
+Assignment for: _TypeScript 1st Assignment_
