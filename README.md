@@ -16,10 +16,12 @@
 interface Student {
   name: string;
   age: number;
+}
+interface Access extends Student {
   isEnrolled: boolean;
   courses: string[];
 }
-const student1: Student = {
+const student1: Access = {
   name: "Ekhlasur Rahman",
   age: 26,
   isEnrolled: true,
