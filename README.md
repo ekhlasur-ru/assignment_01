@@ -10,6 +10,23 @@
 - ক্লাস বা অবজেক্টের জন্য একটি কন্ট্রাক্ট (contract) সংজ্ঞায়িত করতে আদর্শ।
 - সাধারণত কম্পাইল করতে দ্রুত হয়।
 
+## উদাহারণ:
+
+```ts
+interface Student {
+  name: string;
+  age: number;
+  isEnrolled: boolean;
+  courses: string[];
+}
+const student1: Student = {
+  name: "Ekhlasur Rahman",
+  age: 26,
+  isEnrolled: true,
+  courses: ["Math", "Physics", "Chemistry"],
+};
+```
+
 ## Type
 
 - যেকোনো টাইপ (যেমন অবজেক্ট, ইউনিয়ন, প্রিন্টেটিভ ইত্যাদি) সংজ্ঞায়িত করতে পারে।
@@ -17,6 +34,23 @@
 - extends ব্যবহার করতে পারে না, তবে ইন্টারসেকশন অপারেটর (&) ব্যবহার করে টাইপকে একত্রিত করতে পারে।
 - ইউনিয়ন টাইপ, ম্যাপড টাইপ বা অন্যান্য জটিল টাইপ সংজ্ঞায়িত করার জন্য বেশি উপযোগী।
 - ইন্টারফেসের চেয়ে কম্পাইল হতে একটু বেশি সময় লাগতে পারে।
+
+## উদাহারণ:
+
+```ts
+type Student = {
+  name: string;
+  age: number;
+  isEnrolled: boolean;
+  courses: string[];
+};
+const student1: Student = {
+  name: "Ekhlasur Rahman",
+  age: 26,
+  isEnrolled: true,
+  courses: ["Math", "Physics", "Chemistry"],
+};
+```
 
 # 02. Provide an example of using union and intersection types in TypeScript.
 
