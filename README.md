@@ -88,6 +88,6 @@ You can access the GitHub repository here:
 
 ---
 
-Submitted by: _Md. Ekhlasur Rahaman_
-Next Level Web development (_Batch-6_)
+Submitted by: _Md. Ekhlasur Rahaman_ <br>
+Next Level Web development (_Batch-6_)<br>
 Assignment for: _TypeScript 1st Assignment_
